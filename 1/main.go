@@ -11,14 +11,12 @@ func main(){
 	fmt.Println("Please enter a number")
 	fmt.Scan(&number)
 
-	if number >= 0 {
-		if number == 0 { 
-			fmt.Printf("Number is zero")
-		} else {
+	switch {
+		case number > 0:
 			fmt.Printf("Number is positive")
-		} 
-	} else { 
-		fmt.Printf("Number is negative")
+		case number < 0:
+			fmt.Printf("Number is negative")
+		default:
+			fmt.Printf("Number is zero")
 	}
-
 }

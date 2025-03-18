@@ -13,8 +13,8 @@ func main(){
 	fmt.Println("Please enter one letter")
 	fmt.Scan(&input)
 
-	for i := 0; i < len(vowels); i++{
-		if input == vowels[i]{
+	for _, vowel := range vowels{
+		if input == vowel{
 			fmt.Println("Letter is a vowel")
 			return
 		}

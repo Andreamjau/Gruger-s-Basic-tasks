@@ -11,15 +11,15 @@ func main(){
 
 	fmt.Println("Enter a number")
 	fmt.Scan(&input)
-
-	if input > 10 {
-		if input > 100 {
-			fmt.Println("Number is large")
-			return
-		}
+ 
+	switch {
+	case input <= 10:
+		fmt.Println("Number is small")
+	case input > 10 && input <= 100:
 		fmt.Println("Number is medium")
-			return
+	case input > 100: 
+		fmt.Println("Number is large")
+	default: 
+		fmt.Println("waht?")
 	}
-
-	fmt.Println("Nuber is small")
 }
